@@ -21,7 +21,7 @@ Console.WriteLine("Вывод массива:");
 
 for (int i = 0; i < myArray.Length; i++)
 {
-    Console.WriteLine(myArray[i]);
+    Console.Write($"{myArray[i]},");
 }
 Console.ReadLine();
 
