@@ -17,6 +17,9 @@ int[] ArrayCopyByElement(int[] arr)
     for (int i = 0; i < resArray.Length; i++)
     {
         resArray[i] = arr[i];
+    }
+return resArray;
+}    
 void PrintArray(int[] array)
 {
     foreach (int item in array)
