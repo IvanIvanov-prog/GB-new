@@ -2,6 +2,34 @@
 которая заменяет строки на столбцы. В случае, если это невозможно, 
 программа должна вывести сообщение для пользователя.*/
 
+int[,] GenerateArray(int rows, int columns, int minRange, int maxRange)
+{
+    var array = new int[rows, columns];
+    var random = new Random();
+    for (var i = 0; i < array.GetLength(0); i++)
+    {
+        for (var j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = random.Next(minRange, maxRange);
+
+        }
+    }
+    return array;
+}
+
+void PrintArray(int[,] array)
+{
+   for (var i = 0; i < array.GetLength(0); i++)
+   {
+     for (var j = 0; j < array.GetLength(1); j++)
+     {
+        System.Console.Write($"{array[i, j]}\t");
+     }
+     System.Console.WriteLine();
+   } 
+   System.Console.WriteLine();
+}
+
 int[,] TransposeArray(int[,] arr)
 {
     int tmp = 0;

@@ -12,6 +12,32 @@
 2 2 6
 3 4 7
 */
+int[,] GenerateArray(int rows, int columns, int minRange, int maxRange)
+{
+    var array = new int[rows, columns];
+    var random = new Random();
+    for (var i = 0; i < array.GetLength(0); i++)
+    {
+        for (var j = 0; j < array.GetLength(1); j++)
+        {
+            array[i, j] = random.Next(minRange, maxRange);
+
+        }
+    }
+    return array;
+}
+void PrintArray(int[,] array)
+{
+   for (var i = 0; i < array.GetLength(0); i++)
+   {
+     for (var j = 0; j < array.GetLength(1); j++)
+     {
+        System.Console.Write($"{array[i, j]}\t");
+     }
+     System.Console.WriteLine();
+   } 
+   System.Console.WriteLine();
+}
 int[,] RemoveMinItem(int[,] arr)
 {
     int[,] result = new int[arr.GetLength(0)-1,arr.GetLength(1)-1];
@@ -38,7 +64,6 @@ int[,] RemoveMinItem(int[,] arr)
     }
     return result;
 }
-PrintArray(myArray);
 int[] FindMinimum(int[,] arr)
 {
     int[] coords = new int[2];
@@ -57,7 +82,6 @@ int[] FindMinimum(int[,] arr)
     }
     return coords;
 }
-
 int[,] myArray = GenerateArray(4,4,0,20);
 PrintArray(myArray);
 myArray = RemoveMinItem(myArray);
