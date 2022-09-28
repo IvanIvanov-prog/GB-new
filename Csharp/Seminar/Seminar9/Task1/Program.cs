@@ -2,17 +2,6 @@
 N = 5 -> "1, 2, 3, 4, 5"
 N = 6 -> "1, 2, 3, 4, 5, 6" */
 
-int Prompt (string messege)
-{
-    Console.Write(messege);
-    string strValue = Console.ReadLine() ?? "0";
-    bool isNumber = int.TryParse(strValue, out int value);
-    if (isNumber)
-    {
-        return value;
-    }
-    throw new Exception("Данное значение не возможно преобразовать в число");
-}
 void ShowNumbers(int number)
 {
     if (number == 0){return;}
@@ -20,6 +9,9 @@ void ShowNumbers(int number)
     ShowNumbers(number - 1);
     System.Console.Write($"{number} ");
 }
-int digit = 10;
+int digit = 5;
 ShowNumbers(digit);
+
+
+
 
