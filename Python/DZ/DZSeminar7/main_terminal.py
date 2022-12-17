@@ -20,3 +20,4 @@ if type == 'complex':
         else:
             opCom.record_in_file(opCom.division(opCom.Take_Rational_Part(operands[0]), opCom.Take_Symbol(operands[0]), opCom.Take_Imaginary_Part(operands[0]), opCom.Take_Rational_Part(operands[1]), opCom.Take_Symbol(operands[1]), opCom.Take_Imaginary_Part(operands[1])))
         repeat = opCom.Repeat_Or_No()
+        
